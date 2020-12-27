@@ -1,0 +1,16 @@
+{
+  "name": "halyard-ntp",
+  "version": "0.0.1",
+  "author": "Les Aker",
+  "license": "MIT",
+  "summary": "Configure ntp syncing",
+  "source": "https://github.com/halyard/puppet-ntp",
+  "project_page": "https://github.com/halyard/puppet-ntp",
+  "issues_url": "https://github.com/halyard/puppet-ntp/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+
+  ]
+}
