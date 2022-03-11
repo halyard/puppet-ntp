@@ -5,7 +5,7 @@ class ntp::archlinux {
 
   file { '/etc/systemd/timesyncd.conf':
     ensure  => file,
-    content => template('ntp/timesyncd.conf.erb')
+    content => template('ntp/timesyncd.conf.erb'),
   }
   -> service { 'systemd-timesyncd':
     ensure => running,

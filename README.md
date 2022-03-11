@@ -11,4 +11,7 @@ Module to configure NTP syncing
 ```puppet
 include ntp
 ```
+## License
+
+ntp is released under the MIT License. See the bundled LICENSE file for details.
 

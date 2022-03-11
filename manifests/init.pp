@@ -1,20 +1,12 @@
-# == Class: ntp
+# @summary NTP sync configuration
 #
-# Set up ntp syncing
-#
-# === Parameters
-#
-# === Example
-#
-#   class { 'ntp': }
-#
-
+# @param servers NTP server list for time sync
 class ntp (
   Array[String] $servers = ['time1.google.com', 'time2.google.com', 'time3.google.com', 'time4.google.com']
 ) {
-  case $::osfamily {
+  case $facts['os']['family'] {
     'Archlinux': { include ntp::archlinux }
     'Arch': { include ntp::archlinux }
-    default: { fail("Hostname module does not support ${::osfamily}") }
+    default: { fail("Hostname module does not support ${facts['os']['family']}") }
   }
 }
