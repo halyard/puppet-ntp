@@ -7,6 +7,7 @@ class ntp (
   case $facts['os']['family'] {
     'Archlinux': { include ntp::archlinux }
     'Arch': { include ntp::archlinux }
-    default: { fail("Hostname module does not support ${facts['os']['family']}") }
+    'Debian': { include ntp::archlinux }
+    default: { fail("ntp module does not support ${facts['os']['family']}") }
   }
 }
